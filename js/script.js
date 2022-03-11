@@ -10,25 +10,29 @@
   // }
 
   $(window).on('load', function () {
-    $('#preloader').fadeOut('slow', function () {
-      $(this).remove();
-    });
+    setTimeout(() => {
+      $('#preloader').fadeOut('slow', function () {
+        $(this).remove();
+      
+      });
+      $('#body').removeClass('no-scroll');
+    },1000);
   });
 
   
   //Hero Slider
-  $('.hero-slider').slick({
-    autoplay: true,
-    infinite: true,
-    arrows: true,
-    prevArrow: '<button type=\'button\' class=\'prevArrow\'></button>',
-    nextArrow: '<button type=\'button\' class=\'nextArrow\'></button>',
-    dots: false,
-    autoplaySpeed: 20000,
-    pauseOnFocus: false,
-    pauseOnHover: false
-  });
-  $('.hero-slider').slickAnimation();
+  // $('.hero-slider').slick({
+  //   autoplay: true,
+  //   infinite: true,
+  //   arrows: true,
+  //   prevArrow: '<button type=\'button\' class=\'prevArrow\'></button>',
+  //   nextArrow: '<button type=\'button\' class=\'nextArrow\'></button>',
+  //   dots: false,
+  //   autoplaySpeed: 20000,
+  //   pauseOnFocus: false,
+  //   pauseOnHover: false
+  // });
+  // $('.hero-slider').slickAnimation();
 
 
   /* ========================================================================= */
@@ -38,60 +42,20 @@
   $(window).scroll(function () {
     var scroll = $(window).scrollTop();
 
-    //navigation menu 
-    // document.getElementById("menu").checked = true;
-
     //console.log(scroll);
     if (scroll > 420) { //800 before altered
-      //console.log('a');
-      // $('nav').addClass('show-menu');
-      $('nav').addClass('nav-sticky');
+      $('#home-header nav').addClass('nav-sticky');
     } else {
-      //console.log('a');
-      // $('nav').removeClass('show-menu');
-      $('nav').removeClass('nav-sticky');
+      $('#home-header nav').removeClass('nav-sticky');
     }
 
-    if (scroll > 200) { //800 before altere
-      $('header h1').addClass('fade-out');
+    if (scroll > 200) { 
+      $('#home-header h1').addClass('fade-out');
     } else {
-      $('header h1').removeClass('fade-out');
+      $('#home-header h1').removeClass('fade-out');
     }
   
   });
-
-  // const menuCheckbox = document.getElementById('menu');
-  // const navigation = document.getElementById('navigation');
-  // const body = document.getElementById('body');
-
-  // navigation.addEventListener('click', (e) => {
-  //   if (menuCheckbox.checked) {
-  //     $('#menu-overlay').addClass('show-overlay');
-  //     $('body').addClass('stop-scroll');
-  //     $('nav').addClass('extend-menu');
-
-      // overlay.addEventListener('click', () => {
-      //   menuCheckbox.checked = false;
-      // });
-
-      // body.addEventListener('click', (e) => {
-      //   if (e.target.tagName === 'nav') {
-      //     menuCheckbox.checked = false;
-      //   }
-      // });
-      // if (document.body.scrollTop === 0) {
-      //   menuCheckbox.checked = false;
-      // }
-
-  //   } else {
-  //     $('#menu-overlay').removeClass('show-overlay');
-  //     $('body').removeClass('stop-scroll');
-  //     $('nav').removeClass('extend-menu');
-  //   }
-  // });
-
-
-
 
   /* ========================================================================= */
   /*	Portfolio Filtering Hook
@@ -322,30 +286,37 @@ batch("section p", {
 
 
 // the magical helper function (no longer necessary in GSAP 3.3.1 because it was added as ScrollTrigger.batch())...
-function batch(targets, vars) {
-  let varsCopy = {},
-      interval = vars.interval || 0.1,
-      proxyCallback = (type, callback) => {
-        let batch = [],
-            delay = gsap.delayedCall(interval, () => {callback(batch); batch.length = 0;}).pause();
-        return self => {
-          batch.length || delay.restart(true);
-          batch.push(self.trigger);
-          vars.batchMax && vars.batchMax <= batch.length && delay.progress(1);
-        };
-      },
-      p;
-  for (p in vars) {
-    varsCopy[p] = (~p.indexOf("Enter") || ~p.indexOf("Leave")) ? proxyCallback(p, vars[p]) : vars[p];
-  }
-  gsap.utils.toArray(targets).forEach(target => {
-    let config = {};
-    for (p in varsCopy) {
-      config[p] = varsCopy[p];
-    }
-    config.trigger = target;
-    ScrollTrigger.create(config);
-  });
-}
+// function batch(targets, vars) {
+//   let varsCopy = {},
+//       interval = vars.interval || 0.1,
+//       proxyCallback = (type, callback) => {
+//         let batch = [],
+//             delay = gsap.delayedCall(interval, () => {callback(batch); batch.length = 0;}).pause();
+//         return self => {
+//           batch.length || delay.restart(true);
+//           batch.push(self.trigger);
+//           vars.batchMax && vars.batchMax <= batch.length && delay.progress(1);
+//         };
+//       },
+//       p;
+//   for (p in vars) {
+//     varsCopy[p] = (~p.indexOf("Enter") || ~p.indexOf("Leave")) ? proxyCallback(p, vars[p]) : vars[p];
+//   }
+//   gsap.utils.toArray(targets).forEach(target => {
+//     let config = {};
+//     for (p in varsCopy) {
+//       config[p] = varsCopy[p];
+//     }
+//     config.trigger = target;
+//     ScrollTrigger.create(config);
+//   });
+// }
 
 // ======================= SNAP TO SECTIONS
+
+// var video = document.getElementById("welcomevid");
+// video.addEventListener("canplay", function() {
+//   setTimeout(function() {
+//     video.play();
+//   }, 5000);
+// });

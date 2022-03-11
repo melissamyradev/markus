@@ -17,7 +17,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+  <link rel="shortcut icon" type="image/png" href="img/favicon16.png" sizes="16x16"/>
+  <link rel="shortcut icon" type="image/png" href="img/favicon32.png" sizes="32x32"/>
+  <link rel="shortcut icon" type="image/png" href="img/favicon96.png" sizes="96x96"/>
   
   <!-- CSS
   ================================================== -->
@@ -25,8 +27,6 @@
   <link rel="stylesheet" href="plugins/themefisher-font/style.css">
   <!-- bootstrap.min css -->
   <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
-  <!-- Lightbox.min css -->
-  <link rel="stylesheet" href="plugins/lightbox2/dist/css/lightbox.min.css">
   <!-- animation css -->
   <link rel="stylesheet" href="plugins/animate/animate.css">
   <!-- Slick Carousel -->
@@ -38,7 +38,7 @@
 
 </head>
 
-<body id="body">
+<body id="body" class="no-scroll">
 <div id="main-container">
 
  <!--
@@ -58,339 +58,81 @@
   End Preloader
   ==================================== -->
 
-
-  
-
-<!--
-Fixed Navigation
-==================================== -->
-<header class="navigation fixed-top">
-  <div class="container">
-    <!-- main nav -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <!-- logo -->
-      <a class="navbar-brand logo" href="index.html">
-        Markus Roßkopf.
-      </a>
-      <!-- /logo -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
-        aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navigation">
-        <ul class="navbar-nav ml-auto text-center">
-          <li class="nav-item active">
-			<a class="nav-link" href="index.html">Start</a>
-            <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Homepage
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="index.html">Homepage</a>
-              <a class="dropdown-item" href="onepage-slider.html">Onepage</a>
-              <a class="dropdown-item" href="onepage-text.html">Onepage 2</a>
-            </div> -->
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="#">Ich bin</a>
-          </li>
-          <li class="nav-item leistungen">
-            <!-- <a class="nav-link" href="#">Business</a> -->
-			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Ich arbeite
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-				<a class="dropdown-item" href="index.html">mit Organisationen</a>
-				<a class="dropdown-item" href="index.html">mit Personen</a>
-            </div>
-          </li>
-		  <!-- <li class="nav-item ">
-            <a class="nav-link" href="#">Persönlichkeit</a>
-          </li> -->
-          <li class="nav-item ">
-            <a class="nav-link" href="#">Kontakt</a>
-          </li>
-          <!-- <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Pages
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="404.html">404 Page</a>
-              <a class="dropdown-item" href="blog.html">Blog Page</a>
-              <a class="dropdown-item" href="single-post.html">Blog Single Page</a>
-            </div>
-          </li> -->
-        </ul>
-      </div>
-    </nav>
-    <!-- /main nav -->
-  </div>
+<header id="story-gallery-header" class="hero-area">
+		<div class="hero-container text-left">
+			<nav class="nav-sticky">
+				<ul class="d-flex h-100 justify-content-end">
+					<li>
+						<a href="index.html">HOME</a>I
+					</li>
+					<li>
+						<a href="">MEINE ARBEIT</a>I
+					</li>
+					<li>
+						<a href="about.html">MEIN SEIN</a>I
+					</li>
+					<li>
+						<a href="contact.html">MEIN KONTAKT</a>
+					</li>
+					<li class="logo">
+						<a href="index.html"><img src="img/logo-white.png" alt=""></a>
+					</li>
+				</ul>
+			</nav>
+		</div>
 </header>
-<!--
-End Fixed Navigation
-==================================== -->
 
+<main id="story-gallery">
+	<div id="story-gallery-img-enlarged" class="d-flex flex-column justify-content-end" style="background-image: url('img/amisch/amisch-2.JPG');">
+		<h2 class="old-school-headings"><span class="num">01</span>Some Amish Horses</h2>
+		<p class="">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+			Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 		</p>
 
-	<div class="masthead">
-	<div class="th-fullpage hero-area" style="background: url(img/markus.png) center top no-repeat;">
-		<div class="container rellax" data-rellax-speed="3">
-			<div class="ll-container"><p class="greet landing">Hallo</p><a class="landing-link" href="">Über mich</a></div>
-			<div class="ll-container"><p class="landing">Ich bin</p><a class="landing-link" href="">Mich bewegt</a></div>
-			<div class="ll-container"><p class="landing">Markus</p><a class="landing-link" href="">Schreib mir</a></div>
-			<p class="quote"><span class="wording">Kopf  |  Herz  |  Hand</span></p>
-			<!-- Hover over text & make explanation -->
-			<!-- Roßkopf -->
-		</div>
-		<!-- <span class="author">- Hermann Hesse</span> -->
-		<div class="line rellax" data-rellax-speed="7"></div>
-			<!-- <div class="row"> -->
-				<!-- <div class="col-md-12 text-center"> -->
-					<!-- <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Markus Roßkopf</h1> -->
-					<!-- <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">c</p> -->
-					<!-- <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-main" href="service.html">Explore Us</a> -->
-				<!-- </div> -->
-			<!-- </div> -->
-		
-	</div>
-	<!-- <div class="slider-item th-fullpage hero-area jarallax-img" style="background: url(img/Screenshot9.png) center center;">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 text-center"> -->
-					<!-- <h1 data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".1">Agrifood Development, Management & Consulting</h1> -->
-					<!-- <p data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".5"></p> -->
-					<!-- <a data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".8"  class="btn btn-main" href="service.html">Explore Us</a> -->
-				<!-- </div>
-			</div>
-		</div>
-	</div> -->
-</div>
-
-
-
-
-<!--
-Start Description Section
-==================================== -->
-<section id="desc" class="desc section">
-  <div class="container">
-    <div class="row">
-
-      <!-- <div class="col-12"> -->
-        <!-- section title -->
-        <div class="title text-center m-auto">
-			<img src="" alt="">
-			<h2 class="rellax mx-auto" data-rellax-speed="-1">Ich entwickle Menschen und Organisationen.</h2>
-		  <!-- <p class="large">An experienced strategist, consultant, and project facilitator, with an analytical, efficient and solution-driven approach, 
-			  with great passion for personal development.</p> -->
-			  <div class="d-flex">
-				<p class="large m-auto">(Explanation of passion for developing people and organisations) Meine Faszinationen (Mensch in Wechselbeziehung mit dem Raum/Umwelt/Natur
-				Vielschichtigkeit und Komplexität des Menschen (zuerst Anthropologie und Linguistik, über Kultur und Gesellschaft zum Individuum (Psychologie, Entwicklung, Spiritualität) etc…
-				Immer auf der Spur, was schon immer da war und immer da sein wird (Die Trias des Wahren, Schönen und Guten ist ein klassisches (universelles) Ideal nach Sokrates)
-				Undogmatisch und offen
-				</p>
-			  </div>
-
-			<h3 class="rellax quote-heading" data-rellax-speed="-1">„Jeder, der das wirklich tut und lebt, wozu er fähig ist, ist ein Held“<br><span class="author">- Hermann Hesse</span></h2>
-
-      </div>
-    </div>
-  </div> 
-</section> 
-
-<div class="parallax-containers">
-	<div class="parallax-bg" style="background-image: url('img/landscape.jpg')"></div>
-</div>
-
-<section id="story-covers" class="topic-sections">
-	<div class="main-container">
-		<h2 class="text-center old-school-headings">Mein Geschichte.</h2>
-		<p class="large mx-auto text-center">(Brief summary of your personal story, people/projects you have worked with / your fascination with these topics) Meine Faszinationen (Mensch in Wechselbeziehung mit dem Raum/Umwelt/Natur
-			Vielschichtigkeit und Komplexität des Menschen (zuerst Anthropologie und Linguistik, über Kultur und Gesellschaft zum Individuum (Psychologie, Entwicklung, Spiritualität) etc…
-			Immer auf der Spur, was schon immer da war und immer da sein wird (Die Trias des Wahren, Schönen und Guten ist ein klassisches (universelles) Ideal nach Sokrates)
-			Undogmatisch und offen
-			</p>
-		<div class="container rellax" data-rellax-speed="1">
-			<a class="story-cover-anchor" href="#"><div class="story-cover"></div></a>
-			<a class="story-cover-anchor" href="#"><div class="story-cover"></div></a>
-			<a class="story-cover-anchor" href="#"><div class="story-cover"></div></a>
-		</div>
-		
-		<p class="large second text-center mx-auto">(Brief summary of other interests, your background, who you are as a person)<br>
-			<a href="">more about me...</a>
-			</p>
-	</div>
-	
-	<!-- <div class="title text-center mb-5">
-		<h2>mit Organisationen</h2>
-		<div class="border"></div>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus facere accusamus, reprehenderit libero
-			inventore nam.</p>
-	</div> -->
-</section>
-
-<div class="parallax-containers">
-	<div class="parallax-bg" style="background-image: url('img/burundi7.jpg'); filter:grayscale(.6);"></div>
-</div>
-
-<section id="work" class="topic-sections">
-	<!-- <h2 class="text-center old-school-headings">My Work</h2> -->
-	<div class="container left-aligned"id="organisations">
-		<div class="text">
-			<h2 class="old-school-headings">My work with Organisations</h2>
-			<p class="large">Over the past xxx years, I have had the opportunity to work with multiple notable organisations across Central Europe, East Europe/Caucasus/GUS, East Africa and North America.
-				In 2020, I co-led the Global Computational Design practice as well as served as a Group Creative Director at Publicis Sapient.
-				I was a member of the Global Leadership team to cultivate new ideas for improving our client impact, 
-				refactor how we recruit and develop diverse Experience Design talent, 
-				and scale design culture within a 20,000-person global organization. 
-				I completed a short tenure as Chief of Staff to the former Chief Experience Officer, 
-				John Maeda, where I worked to streamline our distributed Global Experience workflow and communications strategies.
-				<br><a class="mt-2 d-inline-block" href="">Read more here...
-				</a>
-			</p>
-		</div>
-
-		<figure>
-			<img src="img/organisation.JPG" alt="">
-			<figcaption class="text-right">Mr.xxx and Mr.xxx discussing about xxx, Burundi Project - June 2021.</figcaption>
-		</figure>
-
-		<figure>
-			<img src="img/organisation.JPG" alt="" class="second-img">
-			<figcaption class="text-left">Description, Project/Organisation name - June 2021.</figcaption>
-		</figure>
-	</div>
-
-	<div class="ml-auto container right-aligned" id="personalities">
-		<div class="text">
-			<h2 class="text-left old-school-headings">My touch on Personalities</h2>
-			<p class="large">Over the past xxx years, I have had the opportunity to work with multiple notable organisations across Central Europe, East Europe/Caucasus/GUS, East Africa and North America.
-				In 2020, I co-led the Global Computational Design practice as well as served as a Group Creative Director at Publicis Sapient.
-				I was a member of the Global Leadership team to cultivate new ideas for improving our client impact, 
-				refactor how we recruit and develop diverse Experience Design talent, 
-				and scale design culture within a 20,000-person global organization. 
-				I completed a short tenure as Chief of Staff to the former Chief Experience Officer, 
-				John Maeda, where I worked to streamline our distributed Global Experience workflow and communications strategies.
-				<br><a class="mt-2 d-inline-block" href="">Read more here...
-				</a>
-			</p>
-		</div>
-
-		<figure>
-			<img src="img/personality.jpg" alt="">
-			<figcaption class="text-left">Mr.xxx and Mr.xxx discussing about xxx, Burundi Project - June 2021.</figcaption>
-		</figure>
-
-		<figure>
-			<img src="img/personality2.png" alt="" class="second-img">
-			<figcaption class="text-right">Description, Project/Organisation name - June 2021.</figcaption>
-		</figure>
-	</div>
-</section>
-
-<!--
-		Start Counter Section
-		==================================== -->
-		
-		<section  class="counter-wrapper section-sm" >
-			<div class="container">
-				<div class="row">
-					<!-- <div class="col-md-12 text-center">
-						<div class="title">
-							<h2>Award-Winning Agency</h2>
-							<p>Vestibulum nisl tortor, consectetur quis imperdiet bibendum, laoreet sed arcu. Sed condimentum iaculis ex, in faucibus lorem accumsan non. Donec mattis tincidunt metus. Morbi sed tortor a risus luctus dignissim.</p>
-						</div>
-					</div> -->
-					<!-- first count item -->
-					<!-- <div class="col-md-3 col-sm-6 col-xs-6 text-center " >
-						<div class="counters-item">
-							<i class="tf-ion-ios-alarm-outline"></i>
-							<div>
-							    <span class="counter" data-count="150">0</span>
-							</div>
-							<h3>Happy Clients</h3>
-						</div>
-					</div> -->
-					<!-- end first count item -->
-				
-					<!-- second count item -->
-					<!-- <div class="col-md-3 col-sm-6 col-xs-6 text-center " >
-						<div class="counters-item">
-							<i class="tf-ion-ios-analytics-outline"></i>
-							<div>
-							    <span class="counter" data-count="130">0</span>
-							</div>
-							<h3>Projects completed</h3>
-						</div>
-					</div> -->
-					<!-- end second count item -->
-				
-					<!-- third count item -->
-					<!-- <div class="col-md-3 col-sm-6 col-xs-6 text-center "  >
-						<div class="counters-item">
-							<i class="tf-ion-ios-compose-outline"></i>
-							<div>
-							    <span class="counter" data-count="99">0</span>
-							</div>
-				            <h3>Positive feedback</h3>
-							
-						</div>
-					</div> -->
-					<!-- end third count item -->
-					
-					<!-- fourth count item -->
-					<!-- <div class="col-md-3 col-sm-6 col-xs-6 text-center ">
-						<div class="counters-item kill-border">
-							<i class="tf-ion-ios-bolt-outline"></i>
-							<div>
-							    <span class="counter" data-count="250">0</span>
-							</div>
-							<h3>Cups of Coffee</h3>
-						</div>
-					</div> -->
-					<!-- end fourth count item -->
-				</div> 		<!-- end row -->
-			</div>   	<!--end container-->
-		</section>   <!-- end section -->
-
-
-
-<!--
-Start Call To Action
-==================================== -->
-<section class="call-to-action section">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12 text-center">
-				<h2 class="old-school-headings">Let's get in touch.</h2>
-				<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicudin bibendum auctor, <br> nisi elit consequat ipsum, nesagittis sem nid elit. Duis sed odio sitain elit.</p>
-				<!-- <p>Contact Me:</p> -->
-				<div class="pt-4">
-					<a target="_blank" class="icons" href="https://www.linkedin.com/in/markusrosskopf/">
-						<i class="fa-brands fa-linkedin fa-2xl px-2"></i>
-					</a>
-					<a class="icons" href="">
-						<i class="fa-brands fa-facebook-square fa-2xl px-3"></i>
-					</a>
-					<a target="_blank" class="icons" href="mailto:rosskopf.markus@gmx.de">
-						<i class="fa-solid fa-envelope fa-2xl px-2"></i>
-					</a>
-					
-					
+		<div id="story-gallery-scroller">
+      <div class="line"></div>
+			<div class="scrollers-container h-100 w-100 d-flex flex-column justify-content-between">
+				<div class="scroller">
+					<div class="img-container">
+						<img data-img="0" src="img/amisch/amisch-1.JPG" alt="">
+					</div>
+				</div>
+				<div class="scroller">
+					<div class="img-container">
+						<img data-img="1" src="img/amisch/amisch-2.JPG" alt="">
+					</div>
+				</div>
+				<div class="scroller">
+					<div class="img-container">
+						<img data-img="2" src="img/amisch/amisch-3.JPG" alt="">
+					</div>
+				</div>
+				<div class="scroller">
+					<div class="img-container">
+						<img data-img="3" src="img/amisch/amisch-4.JPG" alt="">
+					</div>
+				</div>
+				<div class="scroller">
+					<div class="img-container">
+						<img data-img="4" src="img/amisch/amisch-5.JPG" alt="">
+					</div>
+				</div>
+				<div class="scroller">
+					<div class="img-container">
+						<img data-img="5" src="img/amisch/amisch-6.JPG" alt="">
+					</div>
+				</div>
+				<div class="scroller">
+					<div class="img-container">
+						<img data-img="6" src="img/amisch/amisch-7.JPG" alt="">
+					</div>
 				</div>
 			</div>
-		</div> 		<!-- End row -->
-	</div>   	<!-- End container -->
-</section>   <!-- End section -->
+		</div>
+	</div>
+</main>
 
-<!--
-		Start Blog Section
-		=========================================== -->
-
-
-<footer id="footer" class="bg-one">
+<footer id="footer-story-gallery" class="bg-one">
   <!-- <div class="top-footer">
     <div class="container">
       <div class="row">
@@ -466,14 +208,10 @@ Start Call To Action
     <!-- Parallax -->
     <!-- <script src="plugins/parallax/jquery.parallax-1.1.3.js"></script> -->
 
-    <!-- lightbox -->
-    <script src="plugins/lightbox2/dist/js/lightbox.min.js"></script>
     <!-- Owl Carousel -->
     <script src="plugins/slick/slick.min.js"></script>
-    <!-- filter -->
-    <script src="plugins/filterizr/jquery.filterizr.min.js"></script>
     <!-- Smooth Scroll js -->
-    <script src="plugins/smooth-scroll/smooth-scroll.min.js"></script>
+    <!-- <script src="plugins/smooth-scroll/smooth-scroll.min.js"></script> -->
 	<!-- Jarallax -->
 	<!-- <script src="https://unpkg.com/jarallax@2.0"></script> -->
 	<!-- ScrollTrigger -->
@@ -484,6 +222,7 @@ Start Call To Action
 
 	<!-- Custom js !!! ALWAYS PUT LAST !!! -->
     <script src="js/script.js"></script>
+	<script src="js/story-gallery.js"></script>
   </body>
   </html>
 

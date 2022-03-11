@@ -17,7 +17,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+  <link rel="shortcut icon" type="image/png" href="img/favicon16.png" sizes="16x16"/>
+  <link rel="shortcut icon" type="image/png" href="img/favicon32.png" sizes="32x32"/>
+  <link rel="shortcut icon" type="image/png" href="img/favicon96.png" sizes="96x96"/>
   
   <!-- CSS
   ================================================== -->
@@ -36,8 +38,7 @@
 
 </head>
 
-<body id="body">
-<div id="main-container">
+<body id="body" class="no-scroll">
 
  <!--
   Start Preloader
@@ -56,22 +57,28 @@
   End Preloader
   ==================================== -->
 
-<header class="hero-area">
+<div class="welcome position-fixed d-none justify-content-center align-content-center">
+	<video id="welcomevid" autoplay muted loop src="img/markusloop.mp4"></video>
+</div>
+
+<header id="home-header" class="hero-area">
 		<div class="hero-container text-left">
 			<h1 class="old-school-headings">Markus Roßkopf</h1>
 			<nav>
 				<ul class="d-flex">
 					<li>
-						<a href="">MEINE ARBEIT</a>I
+						<a href="organisations.html">MEINE ARBEIT</a>I
 					</li>
 					<li>
-						<a href="">MEIN SEIN</a>I
+						<a href="about.html">MEIN SEIN</a>I
 					</li>
 					<li>
-						<a href="">MEIN KONTAKT</a>
+						<a href="contact.html">MEIN KONTAKT</a>
 					</li>
 					<li class="logo ml-auto">
-						<img src="img/logo-white.png" alt="">
+						<a href="#">
+							<img src="img/logo-white.png" alt="">
+						</a>
 					</li>
 				</ul>
 			</nav>
@@ -80,7 +87,7 @@
 
 
 
-
+<div id="main-container">
 <!--
 Start Description Section
 ==================================== -->
@@ -93,7 +100,7 @@ Start Description Section
 		<div class="section-container rellax" data-rellax-speed="1">
 			<h2 class="old-school-headings">Meine Arbeit</h2>
 			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
-			<button>Mehr über meine Arbeit erfahren</button>
+			<a class="redbutton" href="">Mehr über meine Arbeit erfahren</a>
 		</div>
 	</section>
 
@@ -101,22 +108,22 @@ Start Description Section
 		<div class="section-container">
 			<h2 class="text-center old-school-headings">Meine Erlebnisse</h2>
 			<div class="container d-flex">
-				<div class="polaroids">
+				<div class="polaroids one">
 					<img src="img/polaroid-1.png" alt="">
 					<button>
-						<a href="">Jetzt mehr erfahren</a>
+						<a href="story-1.html">Layout version 1</a>
 					</button>
 				</div>
-				<div class="polaroids">
+				<div class="polaroids two">
 					<img src="img/polaroid-2.png" alt="">
 					<button>
 						<a href="">Jetzt mehr erfahren</a>
 					</button>
 				</div>
-				<div class="polaroids">
+				<div class="polaroids three">
 					<img src="img/polaroid-3.png" alt="">
 					<button>
-						<a href="">Jetzt mehr erfahren</a>
+						<a href="polaroid-1.html">Layout version 2</a>
 					</button>
 				</div>
 			</div>
@@ -130,7 +137,7 @@ Start Description Section
 				<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
 			</div>
 			<!-- <img src="https://media.giphy.com/media/5mKIesIb7gPa4DFMd7/giphy.gif" alt=""> -->
-			<video  width="45%" autoplay loop>
+			<video  width="45%" autoplay loop muted>
 				<source src="img/gif/markus-cropped.mov" type="video/mp4">
 			</video>
 		</div>
@@ -138,13 +145,13 @@ Start Description Section
 		<img src="img/being.png" alt="">
 	</section>
 
-	<section id="section-fascination" class="ter-bg">
-		<div class="section-container d-flex position-relative align-content-center justify-content-center">
-			<h2 class="old-school-headings rellax" data-rellax-speed="2">Meine Faszination <br class=""><span>Mensch</span></h2>
-			<div class="img-container">
-				<img src="img/section-fascination.jpg" alt="">
-			</div>
-			<div class="text-container d-flex flex-column justify-content-center">
+	<section id="section-fascination" class="ter-bg position-relative">
+		<div class="img-container position-absolute">
+			<!-- <img src="img/section-fascination.jpg" alt=""> -->
+		</div>
+		<div class="section-container d-flex position-relative align-content-center justify-content-end">
+			<h2 class="old-school-headings rellax" data-rellax-speed="2">Meine  <br class="">Faszination<br><span>Mensch.</span></h2>
+			<div class="text-container d-flex flex-column justify-content-center align-content-center">
 				<h3>Vom Gesellschaftlichen zum Individuellen und hin zum Universellen.</h3>
 				<p>
 					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
@@ -152,9 +159,7 @@ Start Description Section
 				<p>
 					Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 				</p>
-				<button>
-					<a href="">Über meine Werte</a>
-				</button>
+					<a class="redbutton" href="">Über meine Werte</a>
 			</div>
 		</div>
 	</section>
@@ -165,18 +170,20 @@ Start Description Section
 			<!-- <div class="border"></div> -->
 			<h3 class="text-light">Ein Auszug aus meinem Tagebuch</h3>
 		</div>
-		<!-- <div class="section-container">
-			<h3 class="old-school-headings">"Am Anfang der Welt gab es den Bauern, wo waren die Herren?"</h3>
-			<div class="border"></div>
-			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+		<div class="section-container">
+			<div class="text-container rellax" data-rellax-speed="2">
+				<h3 class="old-school-headings">"Am Anfang der Welt gab es den Bauern, wo waren die Herren?"</h3>
+				<div class="border text-left"></div>
+				<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+				<button class="">Tagebuch herunterladen</button>
+			</div>
 		</div>
-		<button class="Tagebuch herunterladen">Über meine Werte</button> -->
+		<a class="cta d-none" href=""><span></span>Tagebuch herunterladen</a>
 	</section>
 
-	<!-- <div class="parallax-containers"> -->
-		<!-- <div style="background-image: url('img/burundi7.jpg'); filter:grayscale(.6); height: 100vh; background-size: cover;"></div> -->
-	<!-- </div> -->
-
+	<!-- <section>
+		
+	</section> -->
 
 
 	<!--
@@ -210,7 +217,8 @@ Start Description Section
 <!--
 		Start Blog Section
 		=========================================== -->
-
+	</div>
+	<!-- End main-container -->
 
 <footer id="footer" class="bg-one">
   <!-- <div class="top-footer">
@@ -266,9 +274,7 @@ Start Description Section
 
     <!-- end Footer Area
     ========================================== -->
-    
-</div>
-<!-- End main-container -->
+
     
     <!-- 
     Essential Scripts
@@ -304,5 +310,3 @@ Start Description Section
     <script src="js/script.js"></script>
   </body>
   </html>
-
-      <!-- <h6>Design and Developed by <a href="">Themefisher</a></h6> -->
