@@ -2646,9 +2646,16 @@ nav .logo {
   opacity: 0;
   /* transition: .2s ease; */
 }
-
+/* 
 nav .logo img {
   width: 25px;
+  
+} */
+
+nav svg.logo-icon {
+  fill: #fff;
+  width: 25px;
+  height: 25px;
   margin-right: 20px;
 }
 
@@ -3856,8 +3863,9 @@ button {
   height: 100%;
 }
 
-#story-gallery-header nav .logo img {
+#story-gallery-header nav .logo-icon {
   width: 40px;
+  height: 40px;
 }
 
 #story-gallery-header nav a {
