@@ -31,8 +31,11 @@
   <link rel="stylesheet" href="plugins/animate/animate.css">
   <!-- Slick Carousel -->
   <link rel="stylesheet" href="plugins/slick/slick.css">
+  <!-- Slideshow -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">  
+  
 
   <script src="https://kit.fontawesome.com/99609753ca.js" crossorigin="anonymous"></script>
 
@@ -113,23 +116,65 @@ Start Description Section
 		<!-- <h3>This is a short quote. Life is too short to live bitter.</h3> -->
 	</section>
 
-	<section id="section-slides" class="ter-bg d-flex">
-		<div class="img-container">
-			<!-- <img src="img/section-fascination.jpg" alt=""> -->
-		</div>
-		<div class="text-container d-flex flex-column justify-content-center align-content-center">
-			<h2>Meine Faszination Mensch</h2>
-			<h3>Vom Gesellschaftlichen zum Individuellen und hin zum Universellen.</h3>
-			<p>
-				Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
-				At vero eos et accusam et justo duo dolores et ea rebum. 
-				Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
-			</p>
-			<p>
-				Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-			</p>
-			<a class="redbutton" href="">Über meine Werte</a>
-		</div>
+	<section id="section-slides">
+		<div class="splide h-100">
+			<div class="splide__track">
+				  <ul class="splide__list">
+					  <li class="splide__slide">
+
+						  <div class="ter-bg d-flex about-slides one justify-content-center">
+							<div class="img-container left-img">
+								<!-- <img src="img/section-fascination.jpg" alt=""> -->
+							</div>
+							<div class="text-container d-flex flex-column justify-content-center align-content-center">
+								<h2>Meine Faszination Mensch</h2>
+								<h3>Vom Gesellschaftlichen zum Individuellen und hin zum Universellen.</h3>
+								<p>
+									Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+									At vero eos et accusam et justo duo dolores et ea rebum. 
+									Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+								</p>
+								<p>
+									Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+								</p>
+								<a class="redbutton" href="">Über meine Werte</a>
+							</div>
+						  </div>
+
+					  </li>
+					  <li class="splide__slide">
+						<div class="dark-bg d-flex about-slides two justify-content-center">
+							<div class="text-container d-flex flex-column justify-content-start align-content-end text-right">
+								<h2>Über die Dualität</h2>
+								<div class="border"></div>
+								<p>
+									Alle Dualitäten  basieren auf der Urdualität: Mann und Frau Wir externalisieren diese menschlich gewordene Manifestation der unvollkommenheit auf unsere Umwelt und teiles alles in links und rechts, gut und böse, oben und unten. 
+								</p>
+								<p>
+									Ziel ist es, dieser unwahren Veranlagung zu vor zu kommen und ihr EInhalt zu gebieten. Sie ist wahr, aber nur eine sekundäre Wahrheit von menschlich-biologisch-materiellem Ursprung, die nicht das große Ganze zu erfassen mag.								</p>
+							</div>
+							<div class="img-container right-img">
+								<!-- <img src="img/section-fascination.jpg" alt=""> -->
+							</div>
+						  </div>
+					  </li>
+					  <li class="splide__slide">
+						<div class="ter-bg d-flex about-slides three justify-content-between">
+							<div class="img-container left-img position-relative mt-auto">
+								<h2 class="position-absolute">Über den <br><span class="old-school-headings">Überlebenswillen</span><span> des Egos.</span></h2>
+								<!-- <img src="img/section-fascination.jpg" alt=""> -->
+							</div>
+							<div class="mt-auto text-container d-flex flex-column justify-content-start align-content-start">
+								<p>
+									Das Ego besteht (u.a.) aus Identifikationen. Das Ego als wir identifiziert sich sich mit Ideen, Ansichten, Glaubenssätzen etc. die wir nicht (unbedingt) sind, sondern die wir uns irgendwann einmal (von außen) aneignen. Zu einem gewissen Teil nehmen wir sie von unseren Mitmenschen oder unseren externen Referenzpunkten auf, Dazu gehören v.a. auch die Gruppen in denen wir verkehren. Wer zu diesen Gruppen gehört...
+								</p>
+							</div>
+						  </div>
+					  </li>
+				  </ul>
+			</div>
+		  </div>
+		
 		
 	</section>
 
@@ -303,6 +348,8 @@ Start Description Section
 	<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
 	<!-- rellax -->
 	<script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+	<!-- slideshow -->
+	<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
 
 	<!-- Custom js !!! ALWAYS PUT LAST !!! -->
     <script src="js/script.js"></script>

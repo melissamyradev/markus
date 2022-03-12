@@ -17,6 +17,14 @@
       });
       $('#body').removeClass('no-scroll');
     },1000);
+
+    var splide = new Splide( '.splide', {
+      autoplay    : false,
+      rewind      : true,
+      pauseOnHover: true,
+      pauseOnFocus: false,
+    });
+    splide.mount();
   });
 
   
@@ -291,42 +299,9 @@ batch("section p", {
   onLeaveBack: batch => gsap.set(batch, {autoAlpha: 0, overwrite: true})
   // you can also define things like start, end, etc.
 });
-// ======================= STAGGERED REVEALS
 
+/* ========================================================================= */
+  /*	Slideshow
+  /* ========================================================================= */
 
-
-// the magical helper function (no longer necessary in GSAP 3.3.1 because it was added as ScrollTrigger.batch())...
-// function batch(targets, vars) {
-//   let varsCopy = {},
-//       interval = vars.interval || 0.1,
-//       proxyCallback = (type, callback) => {
-//         let batch = [],
-//             delay = gsap.delayedCall(interval, () => {callback(batch); batch.length = 0;}).pause();
-//         return self => {
-//           batch.length || delay.restart(true);
-//           batch.push(self.trigger);
-//           vars.batchMax && vars.batchMax <= batch.length && delay.progress(1);
-//         };
-//       },
-//       p;
-//   for (p in vars) {
-//     varsCopy[p] = (~p.indexOf("Enter") || ~p.indexOf("Leave")) ? proxyCallback(p, vars[p]) : vars[p];
-//   }
-//   gsap.utils.toArray(targets).forEach(target => {
-//     let config = {};
-//     for (p in varsCopy) {
-//       config[p] = varsCopy[p];
-//     }
-//     config.trigger = target;
-//     ScrollTrigger.create(config);
-//   });
-// }
-
-// ======================= SNAP TO SECTIONS
-
-// var video = document.getElementById("welcomevid");
-// video.addEventListener("canplay", function() {
-//   setTimeout(function() {
-//     video.play();
-//   }, 5000);
-// });
+// new Splide( '.splide' ).mount();

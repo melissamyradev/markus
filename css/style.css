@@ -3652,7 +3652,14 @@ button {
   Section-Fascination
 ==================================================================*/
 #section-slides {
-  padding: 40vh 15vw 30vh;
+  padding: 0;
+  margin: 0;
+  min-height: 110vh;
+  width: 100%;
+}
+
+#section-slides .splide__pagination {
+  display: none;
 }
 
 #section-slides h2 {
@@ -3678,12 +3685,84 @@ button {
 #section-slides .img-container,
 #section-slides .text-container {
   width: 50%;
+  background-size: cover;
 }
 
-#section-slides .img-container {
-  height: 100vh;
+.about-slides {
+  padding: 10% 8vw;
+  height: 120vh;
+}
+
+.about-slides.two {
+  padding: 10% 6vw;
+}
+
+.about-slides.three {
+  padding: 10% 8vw 0 0;
+}
+
+.about-slides.two h2 {
+  font-size: 80px!important;
+  line-height: 75px!important;
+}
+
+.about-slides.two p {
+  color: var(--tertiary-color)!important;
+  font-size: 18px;
+}
+
+.about-slides.two .border {
+  margin-bottom: 80px;
+  background-color: var(--tertiary-color);
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.about-slides.three h2 {
+  white-space: nowrap;
+  font-size: 70px!important;
+  line-height: 65px!important;
+  color: rgb(var(--dark-color-main))!important;
+  top: -100px;
+  left: 50px;
+  letter-spacing: 0;
+}
+
+.about-slides.three h2 span {
+  display: inline-block;
+}
+
+.about-slides.three h2 span:first-of-type {
+  font-weight: 500;
+  font-size: 80px!important;
+  color: var(--accent-color)!important;
+  letter-spacing: 2px;
+  /* margin-top: 10px; */
+  margin-right: 20px;
+  margin-left: 20px;
+  transform: translateY(5px);
+}
+
+
+.about-slides.three p {
+  font-size: 18px;
+  border-left: rgb(var(--dark-color-main)) solid 3px;
+  padding-left: 20px;
+}
+
+.about-slides.one .img-container {
   background: url('../img/section-fascination.jpg') center no-repeat;
-  background-size: cover;
+  width: 35%!important;
+}
+
+.about-slides.two .img-container {
+  background: url('../img/slide-2.png') center no-repeat;
+}
+
+.about-slides.three .img-container {
+  background: url('../img/slide-3.jpg') center no-repeat;
+  height: 600px!important;
+  width: 600px!important;
 }
 
 
@@ -3691,12 +3770,27 @@ button {
   width: 100%;
 }
 
+#section-slides .img-container.left-img {
+  margin-right: 80px;
+}
+
+#section-slides .img-container.right-img {
+  margin-left: 40px;
+}
 
 #section-slides .text-container {
-  padding-left: 80px;
-  max-width: 500px;
-  height: 100vh;
+  max-width: 600px;
 }
+
+.about-slides.two .text-container {
+  padding-top: 50px;
+}
+
+.about-slides.three .text-container {
+  height: 600px;
+  width: 25%!important;
+}
+
 
 #about-main #section-diaryexp .section-container .text-container {
   margin-top: 600px;
