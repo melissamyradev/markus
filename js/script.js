@@ -19,7 +19,7 @@
     },1000);
 
     var splide = new Splide( '.splide', {
-      autoplay    : false,
+      autoplay    : true,
       rewind      : true,
       pauseOnHover: true,
       pauseOnFocus: false,
