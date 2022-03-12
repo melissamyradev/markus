@@ -3039,8 +3039,9 @@ button {
 
 #section-diaryexp .section-container {
   height: 120vh;
-  background: url('../img/section-diaryexp.png') center no-repeat;
+  background: url('../img/section-diaryexp.png') no-repeat;
   background-size: cover;
+  background-position: 100px center;
   position: relative;
   overflow: hidden;
 }
@@ -3078,6 +3079,13 @@ button {
   font-size: 60px;
   line-height: 60px;
   margin-bottom: 50px;
+  white-space: nowrap;
+  margin-left: -20px;
+}
+
+#section-diaryexp .section-container h3 span {
+  display: inline-block;
+  margin-left: 18px;
 }
 
 #section-diaryexp .section-container p {
