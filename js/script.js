@@ -43,9 +43,19 @@
     var scroll = $(window).scrollTop();
 
     //console.log(scroll);
-    if (scroll > 420) { //800 before altered
+    // if (scroll > 420) { //800 before altered
+    //   $('#home-header nav').addClass('nav-sticky');
+    // } else {
+    //   $('#home-header nav').removeClass('nav-sticky');
+    // }
+
+    //if window top reaches navigation text
+    if ( $(window).scrollTop() >= $('nav').offset().top ) {
       $('#home-header nav').addClass('nav-sticky');
-    } else {
+    } 
+
+    //if window top reaches bottom of H1 
+    if ( $(window).scrollTop() <= ( $('#home-header h1').offset().top + $('#home-header h1').outerHeight(true)) ) {
       $('#home-header nav').removeClass('nav-sticky');
     }
 
