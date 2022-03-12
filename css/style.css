@@ -2814,6 +2814,7 @@ button {
   width: calc(100% / 3)!important;
   transition: .5s ease;
   position: relative;
+  filter: grayscale(1);
 }
 
 .polaroids::after {
@@ -2875,34 +2876,36 @@ button {
 }
 
 .polaroids.one {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),  url('../img/polaroid-1-img.png');
+  background-image: /* linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),   */url('../img/polaroid-1-img.png');
+  
 }
 
 .polaroids.two {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),  url('../img/polaroid-2-img.png');
+  background-image: url('../img/polaroid-2-img.png');
 }
 
 .polaroids.three {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),  url('../img/polaroid-3-img.png');
+  background-image: url('../img/polaroid-3-img.png');
 }
 
 .polaroids:hover {
   background-size: 160%;
+  filter: grayscale(0);
 }
 
 .polaroids.one:hover {
   transform: translateY(-20px) rotate(-2deg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('../img/polaroid-1-img.png');
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('../img/polaroid-1-img.png'); */
 }
 
 .polaroids.two:hover {
   transform: translateY(-20px) rotate(2deg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('../img/polaroid-2-img.png');
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('../img/polaroid-2-img.png'); */
 }
 
 .polaroids.three:hover {
   transform: translateY(-20px) rotate(3deg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('../img/polaroid-3-img.png');
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('../img/polaroid-3-img.png'); */
   background-position: 50% 35%;
 }
 
