@@ -2597,7 +2597,7 @@ p.large {
   height: 0;
   overflow: hidden;
   transition: .5s ease;
-  border-left: #fff solid 2px;
+  border-left: #fff solid 1px;
   opacity: 0;
   /* white-space: nowrap; */
 }
@@ -2673,9 +2673,10 @@ p.large {
 
 #home-header h1 {
   color: #fff;
-  font-size: 115px;
+  font-size: 180px;
+  line-height: 160px;
   transition: opacity .8s ease;
-  margin-bottom: 15px;
+  margin: 0 0 35px -8px;
   letter-spacing: 3px;
 }
 
@@ -2695,13 +2696,14 @@ h1.page-headings {
   position: static;
   color: #fff;
   letter-spacing: 2px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 
 nav {
   transition: background-color .8s;
   transition-timing-function: cubic-bezier(0,.84,.83,.67);
+  padding-top: 10px;
 }
 
 nav li:not(:last-child) a {
@@ -2714,8 +2716,8 @@ nav li:not(:first-child) a {
 
 nav li {
   color: #fff;
-  font-size: 27px;
-  letter-spacing: 3px;
+  font-size: 19px;
+  letter-spacing: 2px;
   white-space: nowrap;
 }
 
@@ -2723,6 +2725,7 @@ nav a {
   color: #fff!important;
   text-decoration: none!important;
   /* font-family: 'AcuminPro', sans-serif!important; */
+  font-weight: 600;
   transition: color .15s ease, font-size .8s ease;
   transition-timing-function: cubic-bezier(.01,.87,.43,1);
 }
@@ -2774,6 +2777,7 @@ nav svg.logo-icon {
 .nav-sticky a,
 .nav-sticky li {
   font-size: 12px!important;
+  letter-spacing: 2px;
 }
 
 .fade-out {
