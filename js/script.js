@@ -67,7 +67,7 @@
       $('#home-header nav').removeClass('nav-sticky');
     }
 
-    if (scroll > 150) { 
+    if (scroll > 200) { 
       $('#home-header h1').addClass('fade-out');
     } else {
       $('#home-header h1').removeClass('fade-out');
