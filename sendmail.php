@@ -1,52 +1,24 @@
 <?php
-
-// Replace with your email 
-$mail_to = 'info@melissamyra.space';
-
-if (isset($_POST['name']) && isset($_POST['email']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) && isset($_POST['message']))
-{
-    // Collect POST data from form
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
-    $subject = $_POST['subject'];
-    $consulting = $_POST['consulting'];
-    $personality = $_POST['personality'];
-    $advice = $_POST['advice'];
-    
-    // Prefedined Variables  
-    $subject = 'Website Notification: Message from ' . $name . '!';
-    
-    // Collecting all content in $content
-    $content = 'Contact Details:' . "\r\n" ;
-    $content .= 'Name: ' . $name . "\r\n" ;
-    $content .= 'Email: ' . $email . "\r\n" ;
-    $content .= 'Subject' .$subject . "\r\n";
-    $content .= 'Message: ' . $message . "\r\n" ;
-    $content .= 'Consulting: ' . $consulting . "\r\n" ;
-    $content .= 'Personality: ' .$personality . "\r\n";
-    $content .= 'Advice: ' . $advice . "\r\n" ;
-    
-    // Detect & prevent header injections
-    $test = "/(content-type|bcc:|cc:|to:)/i";
-    foreach ($_POST as $key => $val)
-    {
-        if (preg_match($test, $val))
-        {
-            exit;
-        }
-    }
-
-    $headers = 'From: ' . $name . '<' . $email . '>' . "\r\n" .
-        'Reply-To: ' . $email . "\r\n" .
-        'X-Mailer: PHP/' . phpversion();
-
-    // Send the message
-    $send = false;
-    if (mail($mail_to, $subject, $content, $headers))
-    {
-        $send = true;
-    }
-    
-    echo json_encode($send);
+// Get data from form 
+$name = $_POST['name'];
+$email= $_POST['email'];
+$message= $_POST['message'];
+ 
+$to = "info@melissamyra.space";
+$subject = "New Message from markusrosskopf.de!";
+ 
+// The following text will be sent
+// Name = user entered name
+// Email = user entered email
+// Message = user entered message
+$txt ="Name = ". $name . "\r\n  Email = "
+    . $email . "\r\n Message =" . $message;
+ 
+$headers = "From: markusrosskopf.de" . "\r\n";
+if($email != NULL) {
+    mail($to, $subject, $txt, $headers);
 }
+ 
+// Redirect to
+header("Location:last.html");
+?>
