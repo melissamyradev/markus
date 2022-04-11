@@ -2489,6 +2489,24 @@ nav .logo,
   Base
 ==================================================================*/
 
+::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--dark-color-main));
+  transition: .2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
 #main-container {
   /* max-width: 1400px; */
   margin: 0 auto;
@@ -2552,7 +2570,7 @@ p.large {
   font-size: 17px;
   transition: .2s ease;
   width: max-content;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .redbutton:hover {
@@ -2639,10 +2657,16 @@ p.large {
   padding: 20vh 8vw;
 }
 
-/* .max-width-lg {
-  max-width: 1200px;
+.max-width-lg {
+  max-width: 1400px;
   margin: 0 auto;
-} */
+  height: 100%;
+  width: 100%;
+}
+
+.hero-area .max-width-lg {
+  height: max-content;
+}
 
 /* SPLIDE ARROW BUTTONS  */
 .splide__arrow {
@@ -2708,10 +2732,6 @@ nav {
 
 nav li:not(:last-child) a {
   padding-right: 10px;
-}
-
-nav li:not(:last-child) a {
-  
 }
 
 nav li:not(:first-child) a {
@@ -2957,6 +2977,7 @@ button {
   transition: .15s ease;
   border-radius: 2px;
   z-index: 11;
+  white-space: nowrap;
 }
 
 .polaroids:hover::after {
@@ -3370,7 +3391,7 @@ button {
 
 
   #section-internships {
-    padding: 0;
+    padding: 20vh 8vw 0;
     overflow: visible;
   }
 
@@ -3401,7 +3422,6 @@ button {
   }
 
   #section-internships .text-container {
-    padding: 20vh 8vw 0;
     height: max-content;
     width: 100%;
     display: grid!important;

@@ -2,43 +2,43 @@ const storyGallery = [
     {
         num: '0',
         title: 'this is a title',
-        src: 'img/amisch/amisch-1.jpg',
+        src: '../img/amisch/amisch-1.jpg',
         description: 'this is the image description'
     },
     {
         num: '1',
         title: 'this is a title',
-        src: 'img/amisch/amisch-2.jpg',
+        src: '../img/amisch/amisch-2.jpg',
         description: 'this is the image description'
     },
     {
         num: '2',
         title: 'this is a title',
-        src: 'img/amisch/amisch-3.jpg',
+        src: '../img/amisch/amisch-3.jpg',
         description: 'this is the image description'
     },
     {
         num: '3',
         title: 'this is a title',
-        src: 'img/amisch/amisch-4.jpg',
+        src: '../img/amisch/amisch-4.jpg',
         description: 'this is the image description'
     },
     {
         num: '4',
         title: 'this is a title',
-        src: 'img/amisch/amisch-5.jpg',
+        src: '../img/amisch/amisch-5.jpg',
         description: 'this is the image description'
     },
     {
         num: '5',
         title: 'this is a title',
-        src: 'img/amisch/amisch-6.jpg',
+        src: '../img/amisch/amisch-6.jpg',
         description: 'this is the image description'
     },
     {
         num: '6',
         title: 'this is a title',
-        src: 'img/amisch/amisch-7.jpg',
+        src: '../img/amisch/amisch-7.jpg',
         description: 'this is the image description'
     },
 ];
