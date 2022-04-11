@@ -1,22 +1,44 @@
 <?php
-    //we need to get our variables first
+
+// Replace with your email 
+$mail_to = 'info@melissamyra.space';
+
+if (isset($_POST['name']) && isset($_POST['email']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) && isset($_POST['message']))
+{
+    // Collect POST data from form
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
     
-    $email_to =   'support@email.com'; //the address to which the email will be sent
-    $name     =   $_POST['name'];  
-    $email    =   $_POST['email'];
-    $subject  =   $_POST['subject'];
-    $message  =   $_POST['message'];
+    // Prefedined Variables  
+    $subject = 'Website Notification Mailer: Message from ' . $name . '!';
     
-    /*the $header variable is for the additional headers in the mail function,
-     we are asigning 2 values, first one is FROM and the second one is REPLY-TO.
-     That way when we want to reply the email gmail(or yahoo or hotmail...) will know 
-     who are we replying to. */
-    $headers  = "From: $email\r\n";
-    $headers .= "Reply-To: $email\r\n";
+    // Collecting all content in $content
+    $content = 'Contact Details:' . "\r\n" ;
+    $content .= 'Name: ' . $name . "\r\n" ;
+    $content .= 'Email: ' . $email . "\r\n" ;
+    $content .= 'Message: ' . $message . "\r\n" ;
     
-    if(mail($email_to, $subject, $message, $headers)){
-        echo 'sent'; // we are sending this text to the ajax request telling it that the mail is sent..      
-    }else{
-        echo 'failed';// ... or this one to tell it that it wasn't sent    
+    // Detect & prevent header injections
+    $test = "/(content-type|bcc:|cc:|to:)/i";
+    foreach ($_POST as $key => $val)
+    {
+        if (preg_match($test, $val))
+        {
+            exit;
+        }
     }
-?>
+
+    $headers = 'From: ' . $name . '<' . $email . '>' . "\r\n" .
+        'Reply-To: ' . $email . "\r\n" .
+        'X-Mailer: PHP/' . phpversion();
+
+    // Send the message
+    $send = false;
+    if (mail($mail_to, $subject, $content, $headers))
+    {
+        $send = true;
+    }
+    
+    echo json_encode($send);
+}
