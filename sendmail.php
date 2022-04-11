@@ -9,15 +9,23 @@ if (isset($_POST['name']) && isset($_POST['email']) && filter_var($_POST['email'
     $name = $_POST['name'];
     $email = $_POST['email'];
     $message = $_POST['message'];
+    $subject = $_POST['subject'];
+    $consulting = $_POST['consulting'];
+    $personality = $_POST['personality'];
+    $advice = $_POST['advice'];
     
     // Prefedined Variables  
-    $subject = 'Website Notification Mailer: Message from ' . $name . '!';
+    $subject = 'Website Notification: Message from ' . $name . '!';
     
     // Collecting all content in $content
     $content = 'Contact Details:' . "\r\n" ;
     $content .= 'Name: ' . $name . "\r\n" ;
     $content .= 'Email: ' . $email . "\r\n" ;
+    $content .= 'Subject' .$subject . "\r\n";
     $content .= 'Message: ' . $message . "\r\n" ;
+    $content .= 'Consulting: ' . $consulting . "\r\n" ;
+    $content .= 'Personality: ' .$personality . "\r\n";
+    $content .= 'Advice: ' . $advice . "\r\n" ;
     
     // Detect & prevent header injections
     $test = "/(content-type|bcc:|cc:|to:)/i";
