@@ -20,5 +20,5 @@ if($email != NULL) {
 }
  
 // Redirect to
-header("Location:last.html");
+header("Location:index.html");
 ?>
